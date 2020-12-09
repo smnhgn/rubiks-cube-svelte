@@ -7,15 +7,15 @@
 
   const unsubscribe = settings.subscribe(({ size }) => {
     piecePositions = [
-      { top: 0, left: 0 },
-      { top: 0, left: $settings.size + "px" },
-      { top: 0, right: 0 },
-      { top: $settings.size + "px", left: 0 },
-      { top: $settings.size + "px", left: $settings.size + "px" },
-      { top: $settings.size + "px", right: 0 },
-      { bottom: 0, left: 0 },
-      { bottom: 0, left: $settings.size + "px" },
-      { bottom: 0, right: 0 },
+      { x: 0, y: 0, z: 0 },
+      { x: 0, y: `${size}px`, z: 0 },
+      { x: 0, y: `${2 * size}px`, z: 0 },
+      { x: `${size}px`, y: 0, z: 0 },
+      { x: `${size}px`, y: `${size}px`, z: 0 },
+      { x: `${size}px`, y: `${2 * size}px`, z: 0 },
+      { x: `${2 * size}px`, y: 0, z: 0 },
+      { x: `${2 * size}px`, y: `${size}px`, z: 0 },
+      { x: `${2 * size}px`, y: `${2 * size}px`, z: 0 },
     ];
   });
 

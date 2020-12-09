@@ -2,7 +2,7 @@
   import Tile from "./Tile.svelte";
   import { tileConfigs, settings } from "../stores.js";
 
-  export let position = { top: 0, left: 0, right: 0, bottom: 0 };
+  export let position = { x: 0, y: 0, z: 0 };
 </script>
 
 <div
@@ -10,10 +10,10 @@
   style="
     width: {$settings.size}px; 
     height: {$settings.size}px;
-    top: {position.top};
-    left: {position.left};
-    right: {position.right};
-    bottom: {position.bottom};
+    transform: 
+      translateX({position.x})
+      translateY({position.y})
+      translateZ({position.z})
   ">
   {#each $tileConfigs as config}
     <Tile {config} />
