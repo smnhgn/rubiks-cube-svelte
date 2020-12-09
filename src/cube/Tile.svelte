@@ -12,7 +12,11 @@
   class="tile {config.slug}"
   style="
     background: {config.color}; 
-    transform: rotateX({config.rotateX}deg) rotateY({config.rotateY}deg) translateZ({$settings.size / 2}px);
+    border-radius: {$settings.size * 0.15}px;
+    transform: 
+      rotateX({config.rotateX}deg) 
+      rotateY({config.rotateY}deg) 
+      translateZ({$settings.size / 2}px);
   " />
 
 <style>
@@ -22,6 +26,5 @@
     height: 100%;
     border: 0.1px solid black;
     box-shadow: 0 0 1px 0 white inset, 0 0 1px 0;
-    border-radius: 10px;
   }
 </style>
