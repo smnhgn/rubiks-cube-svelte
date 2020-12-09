@@ -1,48 +1,22 @@
 <script>
-  import { onDestroy } from "svelte";
   import Piece from "./Piece.svelte";
-  import { settings } from "../stores.js";
+  import { settings, piecePositions, pieceRotations } from "../stores.js";
 
-  let piecePositions;
-
-  const unsubscribe = settings.subscribe(({ size }) => {
-    piecePositions = [
-      // Layer 1
-      { x: 0, y: 0, z: 0 },
-      { x: 0, y: `${size}px`, z: 0 },
-      { x: 0, y: `${2 * size}px`, z: 0 },
-      { x: `${size}px`, y: 0, z: 0 },
-      { x: `${size}px`, y: `${size}px`, z: 0 },
-      { x: `${size}px`, y: `${2 * size}px`, z: 0 },
-      { x: `${2 * size}px`, y: 0, z: 0 },
-      { x: `${2 * size}px`, y: `${size}px`, z: 0 },
-      { x: `${2 * size}px`, y: `${2 * size}px`, z: 0 },
-      // Layer 2
-      { x: 0, y: 0, z: `${size}px` },
-      { x: 0, y: `${size}px`, z: `${size}px` },
-      { x: 0, y: `${2 * size}px`, z: `${size}px` },
-      { x: `${size}px`, y: 0, z: `${size}px` },
-      { x: `${size}px`, y: `${size}px`, z: `${size}px` },
-      { x: `${size}px`, y: `${2 * size}px`, z: `${size}px` },
-      { x: `${2 * size}px`, y: 0, z: `${size}px` },
-      { x: `${2 * size}px`, y: `${size}px`, z: `${size}px` },
-      { x: `${2 * size}px`, y: `${2 * size}px`, z: `${size}px` },
-      // Layer 3
-      { x: 0, y: 0, z: `${2 * size}px` },
-      { x: 0, y: `${size}px`, z: `${2 * size}px` },
-      { x: 0, y: `${2 * size}px`, z: `${2 * size}px` },
-      { x: `${size}px`, y: 0, z: `${2 * size}px` },
-      { x: `${size}px`, y: `${size}px`, z: `${2 * size}px` },
-      { x: `${size}px`, y: `${2 * size}px`, z: `${2 * size}px` },
-      { x: `${2 * size}px`, y: 0, z: `${2 * size}px` },
-      { x: `${2 * size}px`, y: `${size}px`, z: `${2 * size}px` },
-      { x: `${2 * size}px`, y: `${2 * size}px`, z: `${2 * size}px` },
-    ];
-  });
-
-  onDestroy(() => unsubscribe());
+  const rotate = () => {
+    pieceRotations.update((rotations) => {
+      console.log(rotations);
+      return rotations.map((rot, i) => {
+        console.log({ rot });
+        if (i < 9) {
+          rot.rotateZ += 90;
+        }
+        return rot;
+      });
+    });
+  };
 </script>
 
+<button class="rotate-button" on:click={rotate}>Rotate</button>
 <div class="cube-container">
   <div
     class="cube"
@@ -55,17 +29,38 @@
       transform-origin: 50% 50% {$settings.size}px;
       
     ">
-    {#each piecePositions as position}
-      <Piece {position} />
+    {#each $piecePositions as position, i}
+      <div
+        class="piece-container"
+        style="
+          transform: 
+            rotateX({$pieceRotations[i]?.rotateX}deg) 
+            rotateY({$pieceRotations[i]?.rotateY}deg)
+            rotateZ({$pieceRotations[i]?.rotateZ}deg);
+          transform-origin: 50% 50% {$settings.size}px;
+        ">
+        <Piece {position} />
+      </div>
     {/each}
   </div>
 </div>
 
 <style>
+  .rotate-button {
+    position: absolute;
+    top: 0;
+  }
   .cube-container {
     perspective: 500px;
   }
   .cube {
     transform-style: preserve-3d;
+  }
+  .piece-container {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform ease-in-out 0.3s;
   }
 </style>

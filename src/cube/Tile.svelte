@@ -6,6 +6,7 @@
     rotateX: "0deg",
     rotateY: "0deg",
   };
+  export let id = 0;
 </script>
 
 <div
@@ -17,7 +18,9 @@
       rotateX({config.rotateX}deg) 
       rotateY({config.rotateY}deg) 
       translateZ({$settings.size / 2}px);
-  " />
+  ">
+  {id}
+</div>
 
 <style>
   .tile {
@@ -26,5 +29,10 @@
     height: 100%;
     border: 0.1px solid black;
     box-shadow: 0 0 1px 0 white inset, 0 0 1px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkturquoise;
   }
 </style>

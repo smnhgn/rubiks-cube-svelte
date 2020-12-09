@@ -16,7 +16,7 @@
       translateZ({position.z})
   ">
   {#each $tileConfigs as config}
-    <Tile {config} />
+    <Tile {config} id={position.id} />
   {/each}
 </div>
 
