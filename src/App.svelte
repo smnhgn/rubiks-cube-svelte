@@ -5,11 +5,11 @@
 </script>
 
 <main>
+  <Cube />
   <div class="settings">
     <Size />
     <Rotation />
   </div>
-  <Cube />
 </main>
 
 <style>
@@ -22,9 +22,11 @@
     align-items: center;
   }
   .settings {
+    width: 300px;
+    z-index: 999;
     position: absolute;
-    top: 0;
+    bottom: 20px;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
   }
 </style>

@@ -9,12 +9,16 @@
     id="size"
     name="size"
     bind:value={$settings.size}
-    min="25"
-    max="200" />
+    min="30"
+    max="70" />
 </div>
 
 <style>
   .size {
-    padding: 10px;
+    margin: 5px;
+  }
+  .size > input {
+    width: 100%;
+    margin: 0;
   }
 </style>

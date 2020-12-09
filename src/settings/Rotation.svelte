@@ -3,11 +3,11 @@
 </script>
 
 <div class="rotation">
-  <label for="rotation">Rotation X: {$settings.rotateX}deg</label>
+  <label for="rotateX">Rotation X: {$settings.rotateX}deg</label>
   <input
     type="range"
-    id="size"
-    name="size"
+    id="rotateX"
+    name="rotateX"
     bind:value={$settings.rotateX}
     min="-180"
     max="180" />
@@ -16,8 +16,8 @@
   <label for="rotation">Rotation Y: {$settings.rotateY}deg</label>
   <input
     type="range"
-    id="size"
-    name="size"
+    id="rotateY"
+    name="rotateY"
     bind:value={$settings.rotateY}
     min="-180"
     max="180" />
@@ -25,6 +25,10 @@
 
 <style>
   .rotation {
-    padding: 10px;
+    margin: 5px;
+  }
+  .rotation > input {
+    width: 100%;
+    margin: 0;
   }
 </style>
