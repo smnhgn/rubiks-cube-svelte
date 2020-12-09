@@ -2,8 +2,8 @@ import { readable, writable } from "svelte/store";
 
 export const settings = writable({
   size: 50,
-  rotateX: 0,
-  rotateY: 0,
+  rotateX: -20,
+  rotateY: -40,
 });
 
 export const tileConfigs = readable([
