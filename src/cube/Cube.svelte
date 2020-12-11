@@ -1,16 +1,14 @@
 <script>
   import Piece from "./Piece.svelte";
-  import { settings, piecePositions, pieceRotations } from "../stores.js";
+  import { settings, pieces } from "../stores.js";
 
   const rotate = () => {
-    pieceRotations.update((rotations) => {
-      console.log(rotations);
-      return rotations.map((rot, i) => {
-        console.log({ rot });
+    pieces.update((pieces) => {
+      return pieces.map((piece, i) => {
         if (i < 9) {
-          rot.rotateZ += 90;
+          piece.rotateZ += 90;
         }
-        return rot;
+        return piece;
       });
     });
   };
@@ -29,17 +27,17 @@
       transform-origin: 50% 50% {$settings.size}px;
       
     ">
-    {#each $piecePositions as position, i}
+    {#each $pieces as piece, i}
       <div
         class="piece-container"
         style="
           transform: 
-            rotateX({$pieceRotations[i]?.rotateX}deg) 
-            rotateY({$pieceRotations[i]?.rotateY}deg)
-            rotateZ({$pieceRotations[i]?.rotateZ}deg);
+            rotateX({piece.rotateX}deg) 
+            rotateY({piece.rotateY}deg)
+            rotateZ({piece.rotateZ}deg);
           transform-origin: 50% 50% {$settings.size}px;
         ">
-        <Piece {position} />
+        <Piece {piece} />
       </div>
     {/each}
   </div>

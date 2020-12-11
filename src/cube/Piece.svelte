@@ -1,8 +1,8 @@
 <script>
   import Tile from "./Tile.svelte";
-  import { tileConfigs, settings } from "../stores.js";
+  import { tiles, settings } from "../stores.js";
 
-  export let position = { x: 0, y: 0, z: 0 };
+  export let piece;
 </script>
 
 <div
@@ -11,12 +11,12 @@
     width: {$settings.size}px; 
     height: {$settings.size}px;
     transform: 
-      translateX({position.x})
-      translateY({position.y})
-      translateZ({position.z})
+      translateX({piece.translateX * $settings.size}px)
+      translateY({piece.translateY * $settings.size}px)
+      translateZ({piece.translateZ * $settings.size}px)
   ">
-  {#each $tileConfigs as config}
-    <Tile {config} id={position.id} />
+  {#each $tiles as tile}
+    <Tile {tile} id={piece.id} />
   {/each}
 </div>
 

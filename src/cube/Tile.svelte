@@ -1,22 +1,17 @@
 <script>
   import { settings } from "../stores.js";
-  export let config = {
-    color: "#C41E3A",
-    slug: "front",
-    rotateX: "0deg",
-    rotateY: "0deg",
-  };
-  export let id = 0;
+  export let tile;
+  export let id;
 </script>
 
 <div
-  class="tile {config.slug}"
+  class="tile {tile.slug}"
   style="
-    background: {config.color}; 
+    background: {tile.color}; 
     border-radius: {$settings.size * 0.15}px;
     transform: 
-      rotateX({config.rotateX}deg) 
-      rotateY({config.rotateY}deg) 
+      rotateX({tile.rotateX}deg) 
+      rotateY({tile.rotateY}deg) 
       translateZ({$settings.size / 2}px);
   ">
   {id}
