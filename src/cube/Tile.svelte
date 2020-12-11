@@ -15,9 +15,9 @@
       rotateY({tile.rotateY}deg) 
       translateZ({$settings.size / 2}px);
   ">
-  <div>{piece.x}</div>
-  <div>{piece.y}</div>
-  <div>{piece.z}</div>
+  <!-- <div>x: {piece.x}</div>
+  <div>y: {piece.y}</div>
+  <div>z: {piece.z}</div> -->
 </div>
 
 <style>

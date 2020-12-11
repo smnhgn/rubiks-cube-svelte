@@ -1,20 +1,8 @@
 <script>
   import Piece from "./Piece.svelte";
   import { settings, pieces } from "../stores.js";
-
-  const rotate = () => {
-    pieces.update((pieces) => {
-      return pieces.map((piece, i) => {
-        if (i < 9) {
-          piece.rotateZ += 90;
-        }
-        return piece;
-      });
-    });
-  };
 </script>
 
-<button class="rotate-button" on:click={rotate}>Rotate</button>
 <div class="cube-container">
   <div
     class="cube"
@@ -44,10 +32,6 @@
 </div>
 
 <style>
-  .rotate-button {
-    position: absolute;
-    top: 0;
-  }
   .cube-container {
     perspective: 500px;
   }
