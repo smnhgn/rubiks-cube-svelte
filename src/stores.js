@@ -24,6 +24,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "top",
+    z: "back",
   },
   {
     id: 2,
@@ -33,6 +36,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "center",
+    z: "back",
   },
   {
     id: 3,
@@ -42,6 +48,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "bottom",
+    z: "back",
   },
   {
     id: 4,
@@ -51,6 +60,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "top",
+    z: "back",
   },
   {
     id: 5,
@@ -60,6 +72,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "center",
+    z: "back",
   },
   {
     id: 6,
@@ -69,6 +84,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "bottom",
+    z: "back",
   },
   {
     id: 7,
@@ -78,6 +96,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "top",
+    z: "back",
   },
   {
     id: 8,
@@ -87,6 +108,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "center",
+    z: "back",
   },
   {
     id: 9,
@@ -96,6 +120,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "bottom",
+    z: "back",
   },
   {
     id: 10,
@@ -105,6 +132,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "top",
+    z: "center",
   },
   {
     id: 11,
@@ -114,6 +144,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "center",
+    z: "center",
   },
   {
     id: 12,
@@ -123,6 +156,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "bottom",
+    z: "center",
   },
   {
     id: 13,
@@ -132,6 +168,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "top",
+    z: "center",
   },
   {
     id: 14,
@@ -141,6 +180,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "center",
+    z: "center",
   },
   {
     id: 15,
@@ -150,6 +192,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "bottom",
+    z: "center",
   },
   {
     id: 16,
@@ -159,6 +204,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "top",
+    z: "center",
   },
   {
     id: 17,
@@ -168,6 +216,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "center",
+    z: "center",
   },
   {
     id: 18,
@@ -177,6 +228,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "bottom",
+    z: "center",
   },
   {
     id: 19,
@@ -186,6 +240,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "top",
+    z: "front",
   },
   {
     id: 20,
@@ -195,6 +252,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "center",
+    z: "front",
   },
   {
     id: 21,
@@ -204,6 +264,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "left",
+    y: "bottom",
+    z: "front",
   },
   {
     id: 22,
@@ -213,6 +276,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "top",
+    z: "front",
   },
   {
     id: 23,
@@ -222,6 +288,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "center",
+    z: "front",
   },
   {
     id: 24,
@@ -231,6 +300,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "center",
+    y: "bottom",
+    z: "front",
   },
   {
     id: 25,
@@ -240,6 +312,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "top",
+    z: "front",
   },
   {
     id: 26,
@@ -249,6 +324,9 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "center",
+    z: "front",
   },
   {
     id: 27,
@@ -258,5 +336,8 @@ export const pieces = writable([
     rotateX: 0,
     rotateY: 0,
     rotateZ: 0,
+    x: "right",
+    y: "bottom",
+    z: "front",
   },
 ]);

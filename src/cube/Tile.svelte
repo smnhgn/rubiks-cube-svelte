@@ -1,7 +1,7 @@
 <script>
   import { settings } from "../stores.js";
   export let tile;
-  export let id;
+  export let piece;
 </script>
 
 <div
@@ -9,12 +9,15 @@
   style="
     background: {tile.color}; 
     border-radius: {$settings.size * 0.15}px;
+    font-size: {$settings.size * 0.2}px;
     transform: 
       rotateX({tile.rotateX}deg) 
       rotateY({tile.rotateY}deg) 
       translateZ({$settings.size / 2}px);
   ">
-  {id}
+  <div>{piece.x}</div>
+  <div>{piece.y}</div>
+  <div>{piece.z}</div>
 </div>
 
 <style>
@@ -26,8 +29,10 @@
     box-shadow: 0 0 1px 0 white inset, 0 0 1px 0;
 
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    color: darkturquoise;
+    font-weight: bold;
+    color: black;
   }
 </style>

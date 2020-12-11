@@ -16,7 +16,7 @@
       translateZ({piece.translateZ * $settings.size}px)
   ">
   {#each $tiles as tile}
-    <Tile {tile} id={piece.id} />
+    <Tile {tile} {piece} />
   {/each}
 </div>
 
