@@ -7,7 +7,7 @@
 <div
   class="tile {tile.slug}"
   style="
-    background: {tile.color}; 
+    background: {tile.color}CC;
     border-radius: {$settings.size * 0.15}px;
     font-size: {$settings.size * 0.2}px;
     transform: 
@@ -25,9 +25,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 0.1px solid black;
+    border: 0.1px solid white;
     box-shadow: 0 0 1px 0 white inset, 0 0 1px 0;
-
     display: flex;
     flex-flow: column;
     justify-content: center;
